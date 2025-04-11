@@ -29,6 +29,14 @@ public class Main {
         int index = manager.searchTask(arrayList , "Shopping groceries");
         System.out.println( "Task found at index: " + index);
 
+        manager.removeTask(arrayList, "Shopping groceries");
+        System.out.println("The remaining list: " + arrayList);
+
+        System.out.println("Trying to access index ...");
+        String taskAtIndex = manager.getTask(arrayList, 3);
+        System.out.println("Here you have "+ taskAtIndex);
+
+
     }
 
 }

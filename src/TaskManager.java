@@ -28,5 +28,20 @@ public class TaskManager {
     public int searchTask(List<String> tasks, String target) {
         return tasks.indexOf(target);
     }
+    // Remove a task
+    public void removeTask(List<String> tasks, String task) {
+        if (!tasks.remove(task)) {
+            System.out.println(" Task not found!");
+        }
+    }
+    // Get a task at specific index
+    public String getTask(List<String> tasks, int index) {
+        try {
+            return tasks.get(index);
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Error: Index out of bounds!");
+            return "nothing";
+        }
+    }
 
 }
