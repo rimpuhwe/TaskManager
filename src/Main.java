@@ -36,6 +36,42 @@ public class Main {
         String taskAtIndex = manager.getTask(arrayList, 3);
         System.out.println("Here you have "+ taskAtIndex);
 
+        System.out.println("********************************");
+        System.out.println("Let's get continue  with Linked list");
+        System.out.println("********************************");
+
+        try {
+            manager.addTask(linkedList, "Riding ");
+            manager.addTask(linkedList, "Cultural festivals");
+            manager.addTask(linkedList, "Brunch");
+            manager.addTask(linkedList, "Stay caution");
+            manager.addTask(linkedList, "Hiking");
+            manager.addTask(linkedList, "Go to premises");
+            manager.addTask(linkedList, "Travelling ");
+            manager.addTask(linkedList, "Sleeping");
+
+
+        } catch (InvalidTaskException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            System.out.println("processed....");
+        }
+
+
+        manager.sortTasks(linkedList);
+        System.out.println("Sorted Tasks: " + linkedList);
+
+        int taskIndex = manager.searchTask(linkedList , "Hiking");
+        System.out.println( "Task found at index: " + taskIndex);
+
+        manager.removeTask(linkedList, "Shopping groceries");
+        System.out.println("The remaining list: " + linkedList);
+
+        System.out.println("Trying to access index ...");
+        String indexOfTask = manager.getTask(linkedList, 10);
+        System.out.println("Here you have "+ indexOfTask);
+
+
 
     }
 
