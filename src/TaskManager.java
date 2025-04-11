@@ -19,5 +19,14 @@ public class TaskManager {
         }
         tasks.add(task);
     }
+    //sorting alphabetically using collections
+    public void sortTasks(List<String> tasks) {
+        Collections.sort(tasks);
+    }
+
+    // Search for a specific task
+    public int searchTask(List<String> tasks, String target) {
+        return tasks.indexOf(target);
+    }
 
 }

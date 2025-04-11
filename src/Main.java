@@ -11,16 +11,23 @@ public class Main {
         System.out.println("Let's get started with Arraylist");
         System.out.println("********************************");
         try {
-            manager.addTask(arrayList, "Write report");
-            manager.addTask(arrayList, "Code review");
+            manager.addTask(arrayList, "Shopping groceries");
+            manager.addTask(arrayList, "Meditation");
             manager.addTask(arrayList, "Team meeting");
-            manager.addTask(arrayList, "");
+            manager.addTask(arrayList, "Spotting out for relaxing");
 
         } catch (InvalidTaskException e) {
             System.out.println(e.getMessage());
         } finally {
-            System.out.println("Operation logged.");
+            System.out.println("processed....");
         }
+
+
+        manager.sortTasks(arrayList);
+        System.out.println("Sorted Tasks: " + arrayList);
+
+        int index = manager.searchTask(arrayList , "Shopping groceries");
+        System.out.println( "Task found at index: " + index);
 
     }
 
